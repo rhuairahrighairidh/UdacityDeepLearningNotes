@@ -1,0 +1,29 @@
+from __future__ import print_function
+### IMPORT USEFUL MODULES
+import pandas as pd
+print("imported pandas as pd",end=" | ")
+
+import numpy as np
+print("imported numpy as np",end=" | ")
+
+import ruaridhsNotebookImporter
+print("imported ruaridhsNotebookImporter",end=" | ")
+
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
+print("imported matplotlib.pyplot as plt and changed visual style to 'ggplot'",end=" | ")
+
+%matplotlib inline
+%config InlineBackend.figure_format='retina'
+print("set matplotlib plots to display inline at retina resolution",end=" | ")
+
+import nitpick.plots as nplt
+print ("imported nitpick.plots as nplt",end=" | ")
+
+import bokeh.charts as bkc
+import bokeh.plotting as bkp
+print("imported bokeh.charts and bokeh.plotting as bkc and bkp",end=" | ")
+bkc.output_notebook()
+
+
+

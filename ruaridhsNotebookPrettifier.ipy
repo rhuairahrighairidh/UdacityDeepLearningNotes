@@ -1,0 +1,77 @@
+### IMPROVE VISUAL STYLE OF THE NOTEBOOK
+from IPython.core.display import HTML as _HTML
+from IPython.core.display import display as _display
+from __future__ import print_function
+
+_display(_HTML("""
+<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<style>
+div.cell {
+    /* Get Rid of the annoyingly unecessary space around all cells */
+    padding: 0;
+}
+
+div.input_area{
+    /* Get rid of the grey border around all the code cells*/
+    border-color: rgba(0,0,0,0);
+    /* Get rid of the grey background colour*/
+    background: none;/*#f6f6f6;*/
+}
+
+/* Make the in/out prompts less intrusive*/
+.prompt{
+    font-size: 12px;
+}
+div.prompt.output_prompt{
+    color: rgb(180,180,180)
+}
+div.prompt.input_prompt{
+    color: rgb(180,180,180)
+}
+
+/* Make the text larger in the text cells */
+.text_cell_render.rendered_html{
+    font-size: 17px;
+}
+
+/*Change the color of the cell border in edit mode*/
+.edit_mode div.cell.selected {
+    border-color: #EF3333
+}
+
+/* Make the output lines sit closer to their input lines*/
+div.output_subarea{
+    padding-top: 0;
+}
+
+/* Get a better code font */
+.CodeMirror {
+    font-family: 'Inconsolata', monospace;
+    font-size: 14px;
+}
+.output_area pre {
+    font-family: 'Inconsolata', monospace;
+    font-size: 14px;
+}
+/*this is for code in markdown cells*/
+code {
+    font-family: 'Inconsolata', monospace;
+}
+</style>
+"""))
+
+print("\"improved\" the css")
+
+_display(_HTML("""
+<script>
+// These came from main.min.js
+// Get rid of the menu bar with all the buttons
+$('div#maintoolbar').toggle();
+
+// Get rid of the header bar with the name of the notebook
+$('#header-container').toggle();
+$('.header-bar').toggle();
+</script>
+"""))
+
+print("toggled the visibility of header and toolbar")
