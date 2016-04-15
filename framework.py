@@ -138,7 +138,7 @@ class LearningModelWithMonitoring(LearningModel):
         print('   time remaining: {}'.format(datetime.timedelta(seconds=round(secondsRemaining))))
         print('             loss: {}'.format(trainingEventData['loss']))
         #pad to at least 5 characters, round to two decimal points
-        print('training accuracy: {:5.2f}%'.format(100*trainingEventData['trainAccuracy']))
+        print('training accuracy: {:5.2%}'.format(trainingEventData['trainAccuracy']))
         print('  training offset: {}'.format(trainingEventData['offset']))
         self.displayExtraTrainingStats()
     def logExtraTrainingStats(self,trainingEventData):
